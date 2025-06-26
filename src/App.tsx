@@ -15,9 +15,9 @@ type GameState = {
 };
 
 type GameAction =
-  | { type: "NEW_GAME" }
-  | { type: "UPDATE_PLAYER_GUESS"; payload: string }
-  | { type: "PLAYER_GUESS" };
+  { type: "NEW_GAME" }| 
+  { type: "UPDATE_PLAYER_GUESS"; payload: string }|
+  { type: "PLAYER_GUESS" };
 
 const initialState: GameState = {
   playerGuess: "",
@@ -94,12 +94,16 @@ function gameReducer(state: GameState, action: GameAction): GameState {
   return state;
 }
 
+
 function App() {
   const [state, dispatch] = useReducer(gameReducer, initialState);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     dispatch({ type: "UPDATE_PLAYER_GUESS", payload: e.target.value });
   }
+
+  // i need to implement  if (number > 100 || number < 0) for low and high iput above 100 and less than 0
+
 
   return (
     <>
@@ -145,6 +149,7 @@ function App() {
                 return;
               }
               dispatch({ type: "PLAYER_GUESS" });
+              
             }}
           >
             Guess
