@@ -1,0 +1,93 @@
+.myWholeGameBox {
+  max-width: 400px;
+  margin: auto;
+  padding: 1rem;
+  /* border: 2px solid blue; */
+  border-radius: 10px;
+  /* background-color: white; */
+  margin-top: 15rem;
+
+  background: linear-gradient(to right, #dd5e89, #f7bb97);
+
+  /* border: 1px; */
+  /* border-radius: 80rem; */
+  /* margin-left: 4rem;
+  height: 40vh;
+  border-left: 0.7rem solid rgba(73, 44, 145, 0.924); */ 
+  
+}
+
+.myTopPart {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.myMiddlePart {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  
+}
+
+.myCounterArea,
+.myResultOutput,
+.myGameTitle {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.myGuessInputChoice {
+   display: block;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  border:#1d2671;
+  width: 15rem;
+  align-items: center;
+  margin: auto;
+  /* align-content: center;
+  align-self: center;
+  justify-content: center; */
+  justify-items: center;
+}
+
+.myGuessButton,
+.myNewGameButton {
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  /* background: linear-gradient(to right, #dd5e89, #f7bb97); */
+  background: linear-gradient(to right, #c33764, #1d2671);
+  color: white;
+  border: white;
+  /* border-left: 0.1rem solid rgba(73, 44, 145, 0.924); */
+  border-radius: 30px;
+
+   transform: scale(1.05);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  /* color: white;
+  border: none;
+  border-radius: 5px; */
+  cursor: pointer;
+}
+
+
+.myGuessButton:hover,
+.myNewGameButton:hover {
+
+  /* background-color: #28a745; */
+  /* background-color: orange; */
+
+  background: linear-gradient(to right, #dd5e89, #f7bb97);
+  transition: background 0.5s ease;
+  transform: scale(1.25);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  width: 200px;
+  margin: auto;
+}
+
+.myGuessButton:disabled,
+.myNewGameButton:disabled {
+  
+  cursor: not-allowed;
+}
